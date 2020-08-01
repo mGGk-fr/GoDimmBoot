@@ -1,0 +1,8 @@
+assets/*
+!assets/.gitkeep
+roms/*
+!roms/.gitkeep
+www/*
+!www/.gitkeep
+.idea
+.vscode
