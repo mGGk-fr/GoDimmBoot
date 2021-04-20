@@ -11,7 +11,7 @@ import (
 	"regexp"
 )
 
-var g Game.Games
+var g Games
 var rd string
 
 func main() {
@@ -34,7 +34,7 @@ func main() {
 
 func scanRoms() {
 	g = nil
-	libRegEx, e := regexp.Compile("^.+\\.(bin)$")
+	libRegEx, e := regexp.Compile(`^.+\\.(bin)$`)
 	if e != nil {
 		log.Fatal(e)
 	}
