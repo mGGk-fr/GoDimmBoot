@@ -17,7 +17,7 @@ var rd string
 func main() {
 	fmt.Println("---------------")
 	fmt.Println("- Netboot Web -")
-	fmt.Println("- Version 0.1 -")
+	fmt.Println("- Version 0.2 -")
 	fmt.Println("---------------")
 	path, err := os.Getwd()
 	if err != nil {
@@ -57,7 +57,7 @@ func bootWebServer() {
 	http.HandleFunc("/reload", reloadGameList)
 	http.HandleFunc("/games", sendGameList)
 	http.HandleFunc("/sendGame", sendGame)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":1337", nil)
 }
 
 func sendGameList(w http.ResponseWriter, r *http.Request) {
@@ -91,7 +91,7 @@ func sendGame(w http.ResponseWriter, r *http.Request) {
 	key := keys[0]
 
 	log.Println("Url Param 'key' is: " + string(key))
-	cmd := exec.Command("python", "support/booter.py", key)
+	cmd := exec.Command("python3", "support/booter.py", key)
 	out, err := cmd.Output()
 
 	if err != nil {
