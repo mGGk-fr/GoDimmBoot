@@ -34,7 +34,7 @@ func main() {
 
 func scanRoms() {
 	g = nil
-	libRegEx, e := regexp.Compile(`^.+\\.(bin)$`)
+	libRegEx, e := regexp.Compile(`^.+\.(bin)$`)
 	if e != nil {
 		log.Fatal(e)
 	}

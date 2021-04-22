@@ -4,5 +4,8 @@ roms/*
 !roms/.gitkeep
 www/*
 !www/.gitkeep
+support/*
+!support/.gitkeep
 .idea
 .vscode
+__debug_bin
