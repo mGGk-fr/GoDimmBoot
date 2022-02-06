@@ -91,7 +91,7 @@ func sendGame(w http.ResponseWriter, r *http.Request) {
 	key := keys[0]
 
 	log.Println("Url Param 'key' is: " + string(key))
-	cmd := exec.Command("python3", "support/booter.py", key)
+	cmd := exec.Command("python", "support/booter.py", key)
 	out, err := cmd.Output()
 
 	if err != nil {

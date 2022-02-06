@@ -31,7 +31,7 @@ func gameImage(game Game) string {
 	if err != nil {
 		log.Println(err)
 	}
-	rd := path + "/assets/" + game.Name + ".jpg"
+	rd := path + "/assets/" + game.Name + ".png"
 	info, err := os.Stat(rd)
 	if os.IsNotExist(err) {
 		return defaultImage()
